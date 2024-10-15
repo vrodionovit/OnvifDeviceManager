@@ -848,14 +848,7 @@ fi
 #    Build unzip for gsoap
 #       
 ################################################################
-export PATH=$SUBPROJECT_DIR/unzip60/build/dist/bin:$PATH
-if [ ! -z "$(progVersionCheck program=unzip paramoverride="-v")" ]; then
-  printlines project="unzip" task="check" msg="not found"
-  downloadAndExtract project="unzip file="unzip60.tar.gz" path="https://sourceforge.net/projects/infozip/files/UnZip%206.x%20%28latest%29/UnZip%206.0/unzip60.tar.gz/download"
-  buildMakeProject project="unzip srcdir="unzip60" make="-f unix/Makefile generic" installargs="prefix=$SUBPROJECT_DIR/unzip60/build/dist MANDIR=$SUBPROJECT_DIR/unzip60/build/dist/share/man/man1 -f unix/Makefile"
-else
-  printlines project="unzip" task="check" msg="found"
-fi
+
 
 
 ################################################################
